@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+  web:
+    image: nginx:latest
+    container_name: my-website-nginx
+    restart: always
+    ports:
+      - "8080:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro 
+    depends_on:
+      - app
+    networks:
+      - challenge-net
+
+  app:
+    build: . 
+    container_name: my-python-app
+    command: python3 -m http.server 8000
+    networks:
+      - challenge-net
+    deploy:
+      resources:
+        limits:
+          memory: 128M
+
+  database:
+    image: postgres:latest
+    container_name: my-postgres-db
+    environment:
+      POSTGRES_PASSWORD: # Contraseña
+    networks:
+      - challenge-net
+    deploy:
+      resources:
+        limits:
+          memory: 256M
+
+networks:
+  challenge-net:
+    driver: bridge

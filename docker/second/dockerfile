@@ -1,0 +1,10 @@
+FROM python:3.13-alpine
+
+WORKDIR /app
+
+COPY . .
+CMD ["python", "hello.py"]
+
+# Para ver los logs hay que agregar:
+# ENV PYTHONUNBUFFERED=1
+# CMD ["python", "-u", "hello.py"]

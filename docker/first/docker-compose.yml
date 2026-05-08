@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  database: # Nombre del servicio
+    image: postgres:latest
+    container_name: mi-postgres
+    networks:
+      - red-estudio
+    environment:
+      POSTGRES_PASSWORD: # Contraseña
+    volumes:
+      - ./datos-db:/var/lib/postgresql # Carpeta local vinculada al contenedor
+
+  admin-panel:
+    image: adminer:latest
+    container_name: mi-adminer
+    networks:
+      - red-estudio
+    ports:
+      - "8080:8080"
+    depends_on:
+      - database # Esto le dice a Docker que levante primero la DB
+
+networks:
+  red-estudio:
+    driver: bridge
