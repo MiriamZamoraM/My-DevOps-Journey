@@ -1,12 +1,12 @@
 # 🚀 My DevOps Journey: From Docker to Kubernetes
 
-This repository serves as a live documentation of my technical evolution into IT infrastructure and orchestration. It tracks my progress from mastering container fundamentals to managing complex clusters on my **ASUS** laptop.
+This repository serves as a live documentation of my technical evolution into IT infrastructure and orchestration. It tracks my progress from mastering container fundamentals to managing complex clusters on my **OWN** laptop.
 
 ---
 
 ## 🛠️ Tech Stack & Environment
 *   **Operating System**: Debian Trixie (Testing)
-*   **Hardware**: ASUS Primary Workstation
+*   **Hardware**: Own Laptop
 *   **Container Engine**: Docker & Docker Compose
 *   **Orchestration**: Kubernetes (Minikube)
 *   **Methodology**: English Immersion & Physical Knowledge Wall
