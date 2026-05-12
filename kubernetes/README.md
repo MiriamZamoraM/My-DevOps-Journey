@@ -61,6 +61,24 @@ kubectl apply -f storage-practice.yaml
     
 -   **Security & Decoupling**: Learned to manage configuration outside the application layer using ConfigMaps.
 
+### 🚀 Level Up: De la Práctica al Diseño Arquitectónico
+
+> "Cualquiera puede ejecutar un comando, pero no cualquiera puede diseñar la orquesta."
+
+En esta etapa, dejé de ser una espectadora para convertirme en la arquitecta de mi propio clúster. Tras una inmersión profunda de 3 horas en la sintaxis de Kubernetes, logré:
+
+-   **Dominio del YAML:** Pasé de la confusión de las sangrías a estructurar manifiestos complejos con precisión quirúrgica.
+    
+-   **Pensamiento Jerárquico:** Entendí la lógica de las "Matrioshkas" (muñecas rusas) dentro de Kubernetes: `Deployment` > `Template` > `Spec` > `Containers`.
+    
+-   **Control de Flotas:** Desplegué simultáneamente 3 arquitecturas diferentes (**Blog**, **Pagos con Alta Disponibilidad** y **Side-car multi-contenedor**) con un total de 9 Pods perfectamente sincronizados.
+    
+-   **Resolución de Conflictos:** Aprendí a interpretar y corregir errores de _Strict Decoding_ y _Bad Requests_, entendiendo el "porqué" detrás de cada falla estructural.
+    
+
+**Estado actual:** Dashboard en verde. Lógica procesada. El "paraíso" de la terminal ahora tiene un mapa claro. 🥂🐧☸️🚀
+
+
 ---
 ---
 > "From running containers to architecting systems. The journey continues." _Documentation updated: May 11, 2026_

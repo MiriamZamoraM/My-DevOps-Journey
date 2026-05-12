@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: checkout-pro
+  labels:
+    servicio: pagos
+
+spec:
+  replicas: 5
+  selector: 
+    matchLabels:
+      servicio: pagos
+  template:
+    metadata:
+      labels:
+        servicio: pagos
+    spec:
+      containers:
+      - name: pay-logic
+        image: httpd:alpine

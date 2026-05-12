@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mi-tienda-pod
+  labels:
+    tipo: frontend
+spec:
+  containers:
+  - name: servidor-web
+    image: nginx:alpine

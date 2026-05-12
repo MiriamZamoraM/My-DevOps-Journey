@@ -1,0 +1,35 @@
+apiVersion: apps/v1 
+kind: Deployment
+
+metadata:
+  name: servidor-mensajes
+  labels:
+    app: mi-chat
+
+spec:
+  replicas: 2
+  selector:
+    matchLabels: 
+      app: mi-chat
+  template:
+    metadata:
+      labels:
+        app: mi-chat
+    spec: 
+      containers:
+      - name: contenedor-chat
+        image: nginx:alpine
+
+# Justo aquí debajo dejamos una mejor descripción de este script:
+
+# 1. (Versión)
+# 2. (Tipo de objeto)
+# 3. (Identidad del objeto)
+#    (Nombre)
+#    (Etiqueta/Uniforme)
+# 4. (Herramientas/Estado deseado)
+#    (Número de réplicas)
+#    (Selector para buscar el uniforme)
+#    (Plantilla de lo que se va a construir)
+#       (Etiqueta del uniforme para que coincida)
+#       (Especificación del contenedor: nombre e imagen)
