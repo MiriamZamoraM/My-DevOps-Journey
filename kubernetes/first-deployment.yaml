@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-declarative
+  labels:
+    app: my-web-site
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: my-web-site
+  template:
+    metadata:
+      labels:
+        app: my-web-site
+    spec:
+      containers:
+      - name: nginx-container
+        image: nginx:latest
+        ports:
+        - containerPort: 80
