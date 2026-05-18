@@ -1,0 +1,8 @@
+---
+- name: Configuración Mecánica del Contenedor
+  hosts: contenedor_nginx
+  gather_facts: no
+
+  tasks:
+    - name: Personalizar la página usando comandos crudos (sin Python)
+      raw: echo "<h1>¡El rompecabezas está completo! Terraform y Ansible cooperando en la ASUS de Miriam 🚀🧩</h1>" > /usr/share/nginx/html/index.html
