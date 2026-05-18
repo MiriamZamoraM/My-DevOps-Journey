@@ -38,11 +38,16 @@ I am currently immersed in an **English-only study environment**, focusing on th
 
 ---
 
-## 📈 Next Milestones
+## 📈 Last Milestones
 - [x] Complete Docker fundamentals.
 - [x] Install and configure Minikube/Kubectl.
-- [ ] Deploy a multi-tier application in K8s (Current Focus).
-- [ ] Implement Kubernetes Deployments and Services.
+- [x] Deploy a multi-tier application in K8s (Current Focus).
+- [x] Implement Kubernetes Deployments and Services.
+
+
+## ✅ Next Tools and Milestones
+- [x] First script on Terraform
+- [ ] Create a first Playbook with Ansible
 
 ---
 
