@@ -1,54 +1,56 @@
-# 🚀 My DevOps Journey: From Docker to Kubernetes
+# 🚀 My DevOps Journey: From Infrastructure to Orchestration
 
-This repository serves as a live documentation of my technical evolution into IT infrastructure and orchestration. It tracks my progress from mastering container fundamentals to managing complex clusters on my **OWN** laptop.
+This repository serves as a live, hands-on documentation of my technical evolution into cloud infrastructure, automation, and configuration management. It tracks my progress from mastering container fundamentals to architecting complex environments on my **local workstation**.
 
 ---
 
 ## 🛠️ Tech Stack & Environment
-*   **Operating System**: Debian Trixie (Testing)
-*   **Hardware**: Own Laptop
-*   **Container Engine**: Docker & Docker Compose
-*   **Orchestration**: Kubernetes (Minikube)
-*   **Methodology**: English Immersion & Physical Knowledge Wall
+
+* **Operating System:** Debian Trixie (Testing)
+* **Hardware:** Own Device / Local Workstation
+* **Infrastructure as Code (IaC):** Terraform
 
 ---
 
-## 📂 Project Structure
+## 📂 Project Roadmap & Structure
 
 ### 1. Docker Fundamentals 🐳
-Practical exercises focusing on containerization, networking, and storage.
-*   **Named Volumes**: Successfully implemented persistence for database workloads.
-*   **Advanced Networking**: Explored logical reasoning for networking and volume management.
-*   **Assessment**: Reached a self-identified advanced stage in Docker basics.
+Practical exercises focusing on the absolute basics of containerization, networking, and data persistence.
+* **Storage & Resilience:** Implemented Named Volumes for database workloads.
+* **Networking:** Explored advanced bridge networks and internal communication container-to-container.
 
-### 2. Kubernetes Orchestration ☸️
-Transitioning from single containers to automated orchestration.
-*   **Status**: Initial cluster setup completed using the Docker driver.
-*   **Dashboard**: Enabled the Kubernetes Dashboard for real-time cluster monitoring.
-*   **Environment**: Currently following a structured study plan for K8s.
+### 2. Infrastructure & Automation (IaC) 🏗️🔧
+The middle ground where environments are created and configured programmatically without manual intervention.
+* **Terraform Module:** Automating the provision of clean Linux states and containerized environments.
+* **Ansible Module:** Managing configuration through Playbooks, utilizing idempotency and raw commands to bootstrap lightweight infrastructure.
+
+### 3. Kubernetes Orchestration ☸️
+Transitioning from single-host architectures to automated, resilient clusters.
+* **Declarative States:** Moving from imperative CLI commands to structural YAML manifests (Deployments, Services, ConfigMaps).
+* **Data Survival:** Architecting data persistence using Persistent Volume Claims (PVCs) inside ephemeral nodes.
 
 ---
 
 ## 🧠 Learning Strategy & Methodology
-I am currently immersed in an **English-only study environment**, focusing on thinking in English while tackling technical challenges. 
+I maintain a disciplined daily study routine coupled with an **English-only immersion environment**, focusing on technical documentation literacy and professional fluency.
 
-*   **Hands-on Practice**: Prioritizing real-world implementation over simple memorization.
-*   **Organization**: Using **Notion** for digital structure and a **Physical Knowledge Wall** (with blue Washi tape) for memory retention.
-*   **Resources**: Deeply studying "The Phoenix Project" and exploring neurosciences for mental architecture.
-
----
-
-## 📈 Last Milestones
-- [x] Complete Docker fundamentals.
-- [x] Install and configure Minikube/Kubectl.
-- [x] Deploy a multi-tier application in K8s (Current Focus).
-- [x] Implement Kubernetes Deployments and Services.
-
-
-## ✅ Next Tools and Milestones
-- [x] First script on Terraform
-- [ ] Create a first Playbook with Ansible
+* **Theory Meets Practice:** Balancing deep-dive reading (e.g., *"The Phoenix Project"*) with immediate terminal implementation.
+* **Knowledge Base:** Leveraging **Notion** to structurally document edge cases, error debugging, and architectural definitions.
 
 ---
 
-> "Eureka! The alchemy of learning never stops."
+## 📈 Completed Milestones
+- [x] Master Docker fundamentals and network isolation.
+- [x] Configure Minikube environment on Debian Trixie.
+- [x] Build declarative Kubernetes architectures (ConfigMaps & PVCs).
+- [x] Write reusable Terraform blueprints to provision infrastructure.
+- [x] Create and execute Ansible Playbooks for automated deployment.
+
+## 🎯 Next Steps & Upcoming Tools
+- [ ] Orchestrate multi-tier applications integrating the whole stack.
+- [ ] Explore CI/CD pipeline automation principles.
+
+---
+
+> "Eureka! The alchemy of learning never stops. Automation is the absolute key."  
+_Documentation updated: May 19th 2026_
