@@ -34,9 +34,6 @@ Transitioning from single-host architectures to automated, resilient clusters.
 ## 🧠 Learning Strategy & Methodology
 I maintain a disciplined daily study routine coupled with an **English-only immersion environment**, focusing on technical documentation literacy and professional fluency.
 
-* **Theory Meets Practice:** Balancing deep-dive reading (e.g., *"The Phoenix Project"*) with immediate terminal implementation.
-* **Knowledge Base:** Leveraging **Notion** to structurally document edge cases, error debugging, and architectural definitions.
-
 ---
 
 ## 📈 Completed Milestones
