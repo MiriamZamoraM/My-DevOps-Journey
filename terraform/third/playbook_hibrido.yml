@@ -1,0 +1,14 @@
+---
+- name: Automatización Post-Despliegue de Terraform
+  hosts: hibridos
+  gather_facts: no
+
+  tasks:
+    - name: 1. Actualizar el sistema interno
+      raw: apt-get update
+
+    - name: 2. Instalar herramientas de red para auditoría
+      raw: apt-get install -y curl iproute2
+
+    - name: 3. Inyectar el mensaje de éxito en el contenedor
+      raw: mkdir -p /opt/devops && echo "Terraform creo este entorno y Ansible lo configuro con exito." > /opt/devops/estado.txt
