@@ -1,0 +1,14 @@
+---
+- name: Equipar el Servidor Debian Vacío
+  hosts: servidores_debian
+  gather_facts: no
+
+  tasks:
+    - name: Paso 1 - Actualizar los repositorios del sistema
+      raw: apt-get update
+
+    - name: Paso 2 - Instalar Node.js y Curl usando la fuerza de Bash
+      raw: apt-get install -y nodejs curl
+
+    - name: Paso 3 - Crear el directorio del proyecto de Miriam
+      raw: mkdir -p /home/proyecto_senior
