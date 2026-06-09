@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  web_app:
+    image: python:3.10-slim
+    container_name: django-compose-env
+    command: tail -f /dev/null
+    ports:
+      - "8000:8000"
+    networks:
+      - red_local
+
+networks:
+  red_local:
+    driver: bridge
