@@ -24,6 +24,8 @@ services:
     environment:
       POSTGRES_DB: mi_base_django
       POSTGRES_PASSWORD: mi_pass_seguro
+    volumes:
+      - datos_postgres:/var/lib/postgresql/data
     networks:
       - red_local
     deploy:
@@ -35,3 +37,6 @@ services:
 networks:
   red_local:
     driver: bridge
+
+volumes:
+  datos_postgres:
