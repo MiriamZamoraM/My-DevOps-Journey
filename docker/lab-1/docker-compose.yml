@@ -1,4 +1,6 @@
-version: '3.8'
+# version: '3.8'
+# Hoy en día la línea de versión es opcional, pero se recomienda incluirla para 
+# garantizar la compatibilidad con las características específicas de esa versión de Docker Compose.
 
 services:
   web_app:
@@ -9,6 +11,12 @@ services:
       - "8000:8000"
     networks:
       - red_local
+
+    deploy:
+      resources:
+        limits:
+          cpus: '0.50'
+          memory: 500M
 
 networks:
   red_local:
