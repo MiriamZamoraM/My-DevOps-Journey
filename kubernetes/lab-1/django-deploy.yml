@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata: 
+  name: django-app-deployment
+  labels:
+    app: api-django
+
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: api-django
+  template:
+    metadata:
+      labels:
+        app: api-django
+    spec:
+      containers:
+      - name: django-container
+        image: python:3.10-slim
+        command: ["tail", "-f", "/dev/null"]
+        resources:
+          limits:
+            cpu: "500m"
+            memory: "512Mi"
+        envFrom:
+        - configMapRef:
+            name: my-app-config
