@@ -27,3 +27,11 @@ spec:
         envFrom:
         - configMapRef:
             name: my-app-config
+        volumeMounts:
+          - name: django-storage
+            mountPath: /app/data
+
+      volumes:
+        - name: django-storage
+          persistentVolumeClaim:
+            claimName: django-local-pvc
