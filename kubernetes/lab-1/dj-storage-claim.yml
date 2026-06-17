@@ -5,6 +5,7 @@ metadata:
   name: django-local-pvc
 
 spec:
+  storageClassName: ""
   accessModes:
     - ReadWriteOnce
   resources:
