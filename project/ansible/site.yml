@@ -1,0 +1,6 @@
+---
+- name: Configurar Servidores de Desarrollo
+  hosts: servidores
+  become: false
+  roles:
+    - servidor_web

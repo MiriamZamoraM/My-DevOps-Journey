@@ -1,0 +1,12 @@
+---
+- name: Asegurar que el directorio de la aplicación exista
+  ansible.builtin.file:
+    path: /tmp/mi_app_django
+    state: directory
+    mode: '0755'
+
+- name: Desplegar archivo de configuración de la Base de Datos
+  ansible.builtin.copy:
+    content: "DB_HOST=127.0.0.1\nDB_PORT=5432\n"
+    dest: /tmp/mi_app_django/config.env
+    mode: '0600'
