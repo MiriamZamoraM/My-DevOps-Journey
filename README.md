@@ -9,6 +9,7 @@ This repository serves as a live, hands-on documentation of my technical evoluti
 * **Operating System:** Debian Trixie (Testing)
 * **Hardware:** Own Device / Local Workstation
 * **Infrastructure as Code (IaC):** Terraform
+* **Orchestration:** Kubernetes (Minikube)
 
 ---
 
@@ -24,10 +25,10 @@ The middle ground where environments are created and configured programmatically
 * **Terraform Module:** Automating the provision of clean Linux states and containerized environments.
 * **Ansible Module:** Managing configuration through Playbooks, utilizing idempotency and raw commands to bootstrap lightweight infrastructure.
 
-### 3. Kubernetes Orchestration ☸️
-Transitioning from single-host architectures to automated, resilient clusters.
-* **Declarative States:** Moving from imperative CLI commands to structural YAML manifests (Deployments, Services, ConfigMaps).
-* **Data Survival:** Architecting data persistence using Persistent Volume Claims (PVCs) inside ephemeral nodes.
+### 3. Kubernetes Orchestration & IaC Convergence ☸️
+Transitioning from single-host architectures to automated, resilient clusters, and unifying infrastructure creation.
+* **Declarative States:** Moving from imperative CLI commands to structural manifests.
+* **Terraform-K8s Integration:** Bypassing native YAML manifests by declaring Kubernetes resources (Namespaces, Deployments, and NodePort Services) using HashiCorp Configuration Language (HCL) to map strict structural dependencies (`metadata[0].name`).
 
 ---
 
@@ -39,9 +40,10 @@ I maintain a disciplined daily study routine coupled with an **English-only imme
 ## 📈 Completed Milestones
 - [x] Master Docker fundamentals and network isolation.
 - [x] Configure Minikube environment on Debian Trixie.
-- [x] Build declarative Kubernetes architectures (ConfigMaps & PVCs).
-- [x] Write reusable Terraform blueprints to provision infrastructure.
+- [x] Build declarative Kubernetes architectures.
+- [x] Write reusable Terraform blueprints to provision local infrastructure.
 - [x] Create and execute Ansible Playbooks for automated deployment.
+- [x] **Deploy full Nginx stacks on Kubernetes using the Terraform Kubernetes Provider without manual YAML intervention.**
 
 ## 🎯 Next Steps & Upcoming Tools
 - [ ] Orchestrate multi-tier applications integrating the whole stack.
@@ -50,4 +52,4 @@ I maintain a disciplined daily study routine coupled with an **English-only imme
 ---
 
 > "Eureka! The alchemy of learning never stops. Automation is the absolute key."  
-_Documentation updated: May 19th 2026_
+_Documentation updated: July 6th 2026_
