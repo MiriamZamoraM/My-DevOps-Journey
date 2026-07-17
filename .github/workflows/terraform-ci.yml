@@ -1,0 +1,36 @@
+name: "Terraform CI"
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  terraform-checks:
+    name: "Validar Código de Terraform"
+    runs-on: ubuntu-latest
+
+    # Le dice a GitHub que ejecute todo dentro de tu carpeta específica
+    defaults:
+      run:
+        working-directory: ./project2
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: "1.7.0"
+
+      # Al inicializar para CI, no necesitamos descargar plugins reales del backend
+      - name: Terraform Init
+        run: terraform init -backend=false
+
+      - name: Terraform Format Check
+        run: terraform fmt -check
+
+      - name: Terraform Validate
+        run: terraform validate
