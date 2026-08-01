@@ -34,3 +34,19 @@ jobs:
 
       - name: Terraform Validate
         run: terraform validate
+
+
+  # Segundo job que depende del primero, se ejecutará solo si el primero pasa
+  security-scan:
+    name: "Security Scan"
+    runs-on: ubuntu-latest
+
+    # Aquí le decimos al segundo job que depende y necesita el primero para ejecutarse
+    needs: terraform-checks
+
+    env: 
+      STAGE: "staging"
+
+    steps:
+      - name: Security Scan
+        run: echo "Running security scan for ${STAGE} environment"
