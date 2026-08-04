@@ -50,3 +50,8 @@ jobs:
     steps:
       - name: Security Scan
         run: echo "Running security scan for ${STAGE} environment"
+
+      - name: Authenticate Security Scanner
+        run: echo "Authenticating with $MY_TOKEN"
+        env:
+          MY_TOKEN: ${{ secrets.API_SECURITY_TOKEN }}
