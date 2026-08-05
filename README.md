@@ -25,6 +25,7 @@ Practical exercises focusing on the absolute basics of containerization, network
 The middle ground where environments are created and configured programmatically without manual intervention.
 * **Terraform Module:** Automating the provision of clean Linux states and containerized environments.
 * **Ansible Module:** Managing configuration through Playbooks, utilizing idempotency and raw commands to bootstrap lightweight infrastructure.
+* **Modular Infrastructure Blueprints:** Refactored monolithic Terraform code into reusable modules, isolating environment variables, outputs, and local network configurations (`modules/network`).
 
 ### 3. Kubernetes Orchestration & IaC Convergence ☸️
 Transitioning from single-host architectures to automated, resilient clusters, and unifying infrastructure creation.
@@ -53,15 +54,15 @@ I maintain a disciplined daily study routine coupled with an **English-only imme
 - [x] Create and execute Ansible Playbooks for automated deployment.
 - [x] Deploy full Nginx stacks on Kubernetes using the Terraform Kubernetes Provider without manual YAML intervention.
 - [x] Architect and execute a GitHub Actions CI pipeline for automated IaC syntax validation.
-- [x] **Design a multi-stage GitHub Actions pipeline featuring job dependencies (`needs`), encrypted secrets masking, and artifact passing between ephemeral runners.**
+- [x] Design a multi-stage GitHub Actions pipeline featuring job dependencies (`needs`), encrypted secrets masking, and artifact passing between ephemeral runners.
+- [x] **Modularize Terraform code and implement dynamic variables, reusable modules, and outputs.**
 
 ## 🎯 Next Steps & Upcoming Tools
 - [ ] Implement advanced CI/CD automated deployment workflows (exploring Jenkins/Pipelines).
-- [ ] Modularize Terraform code and implement dynamic variables/outputs.
 - [ ] Orchestrate multi-tier applications integrating the whole stack.
 - [ ] Dive into Observability and Monitoring principles (Grafana & Prometheus).
 
 ---
 
 > "Eureka! The alchemy of learning never stops. Automation is the absolute key."  
-_Documentation updated: August 4th 2026_
+_Documentation updated: August 5th 2026_
