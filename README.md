@@ -32,9 +32,11 @@ Transitioning from single-host architectures to automated, resilient clusters, a
 * **Terraform-K8s Integration:** Bypassing native YAML manifests by declaring Kubernetes resources (Namespaces, Deployments, and NodePort Services) using HashiCorp Configuration Language (HCL) to map strict structural dependencies (`metadata[0].name`).
 
 ### 4. Continuous Integration (CI) Automation 🤖
-Implementing automated guardrails to ensure code quality, proper syntax, and structural standards before code reaches any active environment.
+Implementing automated guardrails and multi-stage orchestration to ensure code quality, security, and traceability before code reaches any active environment.
 * **Automated Quality Assurance:** Developed a GitHub Actions workflow to run static analysis, formatting checks (`terraform fmt -check`), and deep syntax validation (`terraform validate`) on every code change.
-* **Multi-Project Repository Management:** Configured targeted pipeline triggers utilizing execution defaults (`working-directory`) to separate concerns within a monorepo structure.
+* **Multi-Job Dependency Orchestration:** Architected sequential job execution graphs using explicit dependency declarations (`needs`) to enforce execution control flows.
+* **Secrets Management & Security:** Integrated encrypted GitHub Secrets with automatic log masking to safely authenticate security scanners within the pipeline.
+* **Artifact Persistence:** Managed data transfer across isolated, ephemeral runners using `upload-artifact` and `download-artifact` actions to pass security scan reports downstream.
 
 ---
 
@@ -50,14 +52,16 @@ I maintain a disciplined daily study routine coupled with an **English-only imme
 - [x] Write reusable Terraform blueprints to provision local infrastructure.
 - [x] Create and execute Ansible Playbooks for automated deployment.
 - [x] Deploy full Nginx stacks on Kubernetes using the Terraform Kubernetes Provider without manual YAML intervention.
-- [x] **Architect and execute a GitHub Actions CI pipeline for automated IaC syntax validation.**
+- [x] Architect and execute a GitHub Actions CI pipeline for automated IaC syntax validation.
+- [x] **Design a multi-stage GitHub Actions pipeline featuring job dependencies (`needs`), encrypted secrets masking, and artifact passing between ephemeral runners.**
 
 ## 🎯 Next Steps & Upcoming Tools
-- [ ] Implement advanced CI/CD automated deployment workflows (exploring Pipelines).
+- [ ] Implement advanced CI/CD automated deployment workflows (exploring Jenkins/Pipelines).
+- [ ] Modularize Terraform code and implement dynamic variables/outputs.
 - [ ] Orchestrate multi-tier applications integrating the whole stack.
 - [ ] Dive into Observability and Monitoring principles (Grafana & Prometheus).
 
 ---
 
 > "Eureka! The alchemy of learning never stops. Automation is the absolute key."  
-_Documentation updated: July 17th 2026_
+_Documentation updated: August 4th 2026_
