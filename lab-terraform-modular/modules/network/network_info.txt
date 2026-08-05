@@ -1,0 +1,3 @@
+VPC_ENV=dev
+SUBNET_CIDR=10.10.0.0/16
+STATUS=provisioned
